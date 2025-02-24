@@ -53,7 +53,7 @@
     text-decoration: none;
     color: var(--text-color);
     font-size: var(--fz-md);
-    margin-right: 10px;
+    margin-right: 20px;
     transition: var(--transition);
 
     &:hover {
