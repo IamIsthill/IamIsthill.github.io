@@ -1,6 +1,22 @@
+import { BaseSyntheticEvent } from "react";
 import "./Header.css";
 import { FaGithub, FaLinkedin } from "react-icons/fa";
 export const Header = () => {
+  const goToLink = (link: string) => {
+    window.open(link, "_blank");
+  };
+  const onClickMakeActive = (e: BaseSyntheticEvent) => {
+    const links = document.querySelectorAll(".nav-link");
+
+    if (links) {
+      links.forEach((link) => {
+        link.parentElement?.classList.remove("active");
+      });
+    }
+
+    e.currentTarget.parentElement.classList.add("active");
+  };
+
   return (
     <header className="header">
       <div>
@@ -10,23 +26,35 @@ export const Header = () => {
       </div>
       <nav>
         <button>
-          <a href="#about">
-            <span></span>About
+          <a href="#about" className="nav-link" onClick={onClickMakeActive}>
+            About
           </a>
         </button>
         <button>
-          <a href="#projects">Projects</a>
+          <a href="#projects" className="nav-link" onClick={onClickMakeActive}>
+            Projects
+          </a>
         </button>
         <button>
-          <a href="#experience">Experience</a>
+          <a
+            href="#experience"
+            className="nav-link"
+            onClick={onClickMakeActive}
+          >
+            Experience
+          </a>
         </button>
       </nav>
       <div className="socials">
-        <button>
+        <button onClick={() => goToLink("https://github.com/IamIsthill")}>
           <FaGithub />
         </button>
         <button>
-          <FaLinkedin />
+          <FaLinkedin
+            onClick={() =>
+              goToLink("https://www.linkedin.com/in/charles-bercasio-a6b00a347")
+            }
+          />
         </button>
       </div>
     </header>

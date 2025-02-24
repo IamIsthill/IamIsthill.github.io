@@ -31,17 +31,29 @@
     border: none;
     background-color: inherit;
     transition: var(--transition);
+    color: var(--text-color);
     &:hover {
-        transform: scale(1.2);
+        transform: scale(1.2)translateX(10px);
+        color: var(--accent-color);
+
+
     }
 }
 
 
 .header nav button a{
     text-decoration: none;
-    color: var(--text-color);
+    color: inherit;
     text-transform: uppercase;
 }
+
+.header nav button.active {
+    transition: var(--transition);
+    transform: scale(1.2)translateX(10px);
+
+    color: var(--accent-color);
+}
+
 
 .header .socials {
     margin-top: 4em;
@@ -55,6 +67,8 @@
     font-size: var(--fz-md);
     margin-right: 20px;
     transition: var(--transition);
+    border-radius: 50%;
+
 
     &:hover {
         transform: scale(1.2);

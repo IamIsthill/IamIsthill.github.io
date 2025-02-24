@@ -1,4 +1,3 @@
-import "./styles/reset.css";
 import "./styles/Global.css";
 import { About } from "../pages/about";
 import { Project } from "../pages/project";

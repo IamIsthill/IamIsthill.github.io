@@ -20,6 +20,7 @@
         transform: scale(1.02);
         border: 1px solid var(--accent-color);
         border-top: 2px solid var(--accent-color);
+        cursor: pointer;
     }
 }
 
