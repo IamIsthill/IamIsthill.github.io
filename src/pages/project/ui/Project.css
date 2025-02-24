@@ -1,0 +1,28 @@
+.projects {
+    padding-top: 5em;
+}
+
+/* PROJECTS */
+.projects article {
+    display: grid;
+    grid-template-columns: 1fr auto;
+    gap: 2em;
+    padding: 2em 3em;
+    border-radius: 4px;
+    font-size: 0.9rem;
+    border: 1px solid transparent;
+    border-top: 2px solid transparent;
+    transition: var(--transition);
+    margin-bottom: 4em;
+
+
+    &:hover {
+        transform: scale(1.02);
+        border: 1px solid var(--accent-color);
+        border-top: 2px solid var(--accent-color);
+    }
+}
+
+.projects h3 {
+    font-size: 1.4rem;
+}

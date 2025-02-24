@@ -1,0 +1,26 @@
+.about article {
+    margin-top: 2em;
+    margin-bottom: 4em;
+    font-size: 1.1rem;
+    line-height: 1.5;
+}
+
+.about article p {
+    margin-bottom: 1em;
+}
+
+.about .highlight {
+    margin: 2em 0;
+    padding: 2em 4em;
+    background-color: var(--highlight);
+    border-radius: 3px;
+    border: 1px solid transparent;
+    border-top: 2px solid transparent;
+    transition: var(--transition);
+    cursor: pointer;
+
+    &:hover {
+        border: var(--border);
+        border-top: var(--border-top);
+    }
+}

@@ -1,0 +1,64 @@
+.header {
+    position: sticky;
+    top:0;
+    left: 0;
+    height: 100vh;
+    padding: 4em 4em;
+}
+
+.header .big-heading {
+    font-size: var(--fz-lg);
+    font-weight: 900;
+}
+
+.header .small-heading {
+    font-size: var(--fz-md);
+    font-weight: 200;
+    margin-bottom: 1.2em;
+}
+
+
+.header nav {
+    margin-top: 3em;
+    display: grid;
+    justify-content: start;
+    gap: 1em;
+
+}
+
+.header nav button {
+    text-align: start;
+    border: none;
+    background-color: inherit;
+    transition: var(--transition);
+    &:hover {
+        transform: scale(1.2);
+    }
+}
+
+
+.header nav button a{
+    text-decoration: none;
+    color: var(--text-color);
+    text-transform: uppercase;
+}
+
+.header .socials {
+    margin-top: 4em;
+}
+
+.header .socials button{
+    background: none;
+    border: none;
+    text-decoration: none;
+    color: var(--text-color);
+    font-size: var(--fz-md);
+    margin-right: 10px;
+    transition: var(--transition);
+
+    &:hover {
+        transform: scale(1.2);
+        cursor: pointer;
+
+    }
+}
