@@ -1,63 +1,24 @@
-import { BaseSyntheticEvent } from "react";
-// import "./Header.css";
-import { FaGithub, FaLinkedin } from "react-icons/fa";
+import { Nav } from "./Nav";
+import { Socials } from "./Socials";
 
-export const Header = () => {
-  const goToLink = (link: string) => {
-    window.open(link, "_blank");
-  };
-  const onClickMakeActive = (e: BaseSyntheticEvent) => {
-    const links = document.querySelectorAll(".nav-link");
-
-    if (links) {
-      links.forEach((link) => {
-        link.parentElement?.classList.remove("active");
-      });
-    }
-
-    e.currentTarget.parentElement.classList.add("active");
-  };
-
+export const Header = ({
+  visibleSection,
+}: {
+  visibleSection: String | null;
+}) => {
   return (
-    <header className="h-dvh">
-      <div>
-        <h1 className="big-heading">Charles Bercasio</h1>
-        <p className="small-heading">Aspiring Full Stack Developer</p>
-        <p>I build things for the internet.</p>
+    <header className="h-dvh flex flex-col md:justify-between px-10 whitespace-normal min-w-fit max-w-full py-30 gap-10 md:gap-20">
+      <div className="flex flex-col gap-5 md:gap-3">
+        <h1 className="text-7xl md:text-4xl lg:text-5xl md:whitespace-nowrap font-bold drop-shadow-2xl">
+          Charles Bercasio
+        </h1>
+        <p className="text-2xl font-extralight">Full Stack Developer</p>
+        <p className="text-md mt-10 md:mt-0">
+          I build things for the internet.
+        </p>
       </div>
-      <nav>
-        <button>
-          <a href="#about" className="nav-link" onClick={onClickMakeActive}>
-            About
-          </a>
-        </button>
-        <button>
-          <a href="#projects" className="nav-link" onClick={onClickMakeActive}>
-            Projects
-          </a>
-        </button>
-        <button>
-          <a
-            href="#experience"
-            className="nav-link"
-            onClick={onClickMakeActive}
-          >
-            Experience
-          </a>
-        </button>
-      </nav>
-      <div className="socials">
-        <button onClick={() => goToLink("https://github.com/IamIsthill")}>
-          <FaGithub />
-        </button>
-        <button>
-          <FaLinkedin
-            onClick={() =>
-              goToLink("https://www.linkedin.com/in/charles-bercasio-a6b00a347")
-            }
-          />
-        </button>
-      </div>
+      <Nav visibleSection={visibleSection} />
+      <Socials />
     </header>
   );
 };
