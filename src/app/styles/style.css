@@ -1,4 +1,4 @@
-@import "tailwindcss"
+@import "tailwindcss";
 
 @theme {
     --color-main-bg: #040a1e;

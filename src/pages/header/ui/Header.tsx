@@ -19,7 +19,7 @@ export const Header = () => {
   };
 
   return (
-    <header className="header">
+    <header className="h-dvh">
       <div>
         <h1 className="big-heading">Charles Bercasio</h1>
         <p className="small-heading">Aspiring Full Stack Developer</p>
