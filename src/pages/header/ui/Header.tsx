@@ -1,6 +1,7 @@
 import { BaseSyntheticEvent } from "react";
-import "./Header.css";
+// import "./Header.css";
 import { FaGithub, FaLinkedin } from "react-icons/fa";
+
 export const Header = () => {
   const goToLink = (link: string) => {
     window.open(link, "_blank");

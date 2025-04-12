@@ -1,4 +1,5 @@
-import "./styles/Global.css";
+// import "./styles/Global.css";
+import "./styles/index.css";
 import { About } from "../pages/about";
 import { Project } from "../pages/project";
 import { Experience } from "../pages/experience";

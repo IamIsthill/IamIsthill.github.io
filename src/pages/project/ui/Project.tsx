@@ -1,5 +1,5 @@
 import { Image1, Image2 } from "../../../shared/assets";
-import "./Project.css";
+// import "./Project.css";
 
 interface IProject {
   image: string;
