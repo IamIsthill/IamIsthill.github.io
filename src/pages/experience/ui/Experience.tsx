@@ -5,8 +5,10 @@ export const Experience = ({ ref }: Ref) => {
   return (
     <section id="experience" className="experience" ref={ref}>
       <article>
-        <h6 className="text-3xl font-light">February 2025 - Present</h6>
-        <div className="mt-2 flex flex-col gap-2">
+        <h6 className="text-3xl font-light whitespace-nowrap">
+          February 2025 - Present
+        </h6>
+        <div className="mt-2 flex flex-col gap-5">
           <p className="text-sm font-semibold">
             Backend Developer Intern · A2K Group
           </p>
