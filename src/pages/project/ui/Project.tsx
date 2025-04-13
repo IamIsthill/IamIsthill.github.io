@@ -33,15 +33,14 @@ const ProjectCard = (props: IProject) => {
   return (
     <article
       onClick={() => onClickRerouteToGithub(props.link)}
-      className="grid xl:grid-cols-[200px_1fr] gap-5 cursor-pointer  transition-all  p-4 rounded-sm group relative z-1"
+      className="grid xl:grid-cols-[200px_1fr] gap-10 cursor-pointer  transition-all  p-4 rounded-sm group relative z-1"
     >
       <div className="absolute -inset-x-1 -inset-y-1 z-0 hidden rounded-sm transition motion-reduce:transition-none md:-inset-x-6 md:block md:group-hover:bg-slate-800/50 md:group-hover:shadow-[inset_0_1px_0_0_rgba(148,163,184,0.1)] md:group-hover:drop-shadow-lg"></div>
-      <figure className="pt-2 relative z-20">
+      <figure className="pt-2 relative z-20 ">
         <img
           src={props.image}
           alt={props.title || "Project Image"}
-          className="w-full h-auto object-contain"
-          // style={{ maxWidth: "200px", maxHeight: "100%" }}
+          className="w-full h-auto object-contain md:group-hover:border-slate-600/50 border-2 border-transparent rounded-sm"
         />
       </figure>
       <div className="description relative z-20">
@@ -56,7 +55,7 @@ const ProjectCard = (props: IProject) => {
 
 export const Project = ({ ref }: Ref) => {
   return (
-    <section id="projects" className="grid gap-4 py-20" ref={ref}>
+    <section id="projects" className="grid gap-10 py-20" ref={ref}>
       {projectList.map(({ title, description, image, link }) => (
         <ProjectCard
           title={title}
