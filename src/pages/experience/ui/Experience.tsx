@@ -1,7 +1,6 @@
-// import "./Experience.css";
-import { Ref } from "../../../shared/interface";
+import { forwardRef } from "react";
 
-export const Experience = ({ ref }: Ref) => {
+export const Experience = forwardRef<HTMLElement>((_, ref) => {
   return (
     <section id="experience" className="experience" ref={ref}>
       <article>
@@ -21,4 +20,4 @@ export const Experience = ({ ref }: Ref) => {
       </article>
     </section>
   );
-};
+});

@@ -1,5 +1,5 @@
 import { Image1, Image2 } from "../../../shared/assets";
-import { Ref } from "../../../shared/interface";
+import { forwardRef } from "react";
 // import "./Project.css";
 
 interface IProject {
@@ -53,7 +53,7 @@ const ProjectCard = (props: IProject) => {
   );
 };
 
-export const Project = ({ ref }: Ref) => {
+export const Project = forwardRef<HTMLElement>((_, ref) => {
   return (
     <section id="projects" className="grid gap-10 py-20" ref={ref}>
       {projectList.map(({ title, description, image, link }) => (
@@ -66,4 +66,4 @@ export const Project = ({ ref }: Ref) => {
       ))}
     </section>
   );
-};
+});
