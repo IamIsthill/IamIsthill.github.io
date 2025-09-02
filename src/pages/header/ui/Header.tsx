@@ -4,10 +4,10 @@ import { Socials } from "./Socials";
 export const Header = ({
   visibleSection,
 }: {
-  visibleSection: String | null;
+  visibleSection: string | null;
 }) => {
   return (
-    <header className="h-dvh flex flex-col md:justify-between px-10 whitespace-normal min-w-fit max-w-full py-30 gap-10 md:gap-20">
+    <header className="sticky top-0 left-0 h-dvh flex flex-col md:justify-between px-10 whitespace-normal min-w-fit max-w-full py-30 gap-10 md:gap-20">
       <div className="flex flex-col gap-5 md:gap-3">
         <h1 className="text-7xl md:text-4xl lg:text-5xl md:whitespace-nowrap font-bold drop-shadow-2xl">
           Charles Bercasio

@@ -1,6 +1,6 @@
 import React from "react";
 
-export const Nav = ({ visibleSection }: { visibleSection: String | null }) => {
+export const Nav = ({ visibleSection }: { visibleSection: string | null }) => {
   const onClickMakeActive = (e: React.BaseSyntheticEvent) => {
     const links = document.querySelectorAll(".nav-link");
 
