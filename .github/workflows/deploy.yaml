@@ -22,7 +22,7 @@ jobs:
           workflow: build.yaml
           workflow_conclusion: success
           name: react-build
-          path: build
+          path: dist
 
       - name: Push to build-branch
         run: |
@@ -34,8 +34,8 @@ jobs:
           git reset --hard
           git clean -fdx 
 
-          cp -r build/* .
-          rm -rf build
+          cp -r dist/* .
+          rm -rf dist
 
           git add .
           git commit -m "Deploy build [skip ci]"
