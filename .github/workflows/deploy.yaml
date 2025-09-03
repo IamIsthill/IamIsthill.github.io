@@ -24,6 +24,9 @@ jobs:
           name: react-build
           path: dist
 
+      - name: Debug list dist
+        run: ls -R dist || echo "dist folder is missing"
+
       - name: Push to build-branch
         run: |
           git config --global user.name "github-actions[bot]"
