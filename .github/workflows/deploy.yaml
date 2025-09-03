@@ -37,7 +37,7 @@ jobs:
           git reset --hard
           git clean -fdx 
 
-          cp -r dist/* .
+          cp -r dist/. .
           rm -rf dist
 
           git add .
